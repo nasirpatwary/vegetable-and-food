@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vegetable</title>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "button": "#F53E32",
+            "p-title": "#7A7A7A",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="max-w-5xl mx-auto p-2">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="border pr-2 rounded text-black">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded">
+              <li><a>Home</a></li>
+              <li>
+                <details>
+                  <summary>Category</summary>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Products</summary>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Pages</summary>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Blog</summary>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Elements</summary>
+                </details>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center lg:mr-12 hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a>Home</a></li>
+            <li>
+              <details>
+                <summary>Category</summary>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Products</summary>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Pages</summary>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Blog</summary>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+              </details>
+            </li>
+          </ul>
+        </div>
+        <div class="navbar-end flex">
+          <div class="md:flex hidden">
+            <img src="images/Icon (3).jpg" alt="">
+            <p>+123 ( 456 ) ( 7890 )</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="max-w-5xl mx-auto p-2">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="flex items-center">
+          <img src="images/Group (7).jpg" alt="">
+          <h4>FoodTrove</h4>
+        </div>
+        <div>
+          <form class="mx-auto lg:ml-28">
+            <div class="flex">
+              <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your
+                Email</label>
+              <button id="dropdown-button" data-dropdown-toggle="dropdown"
+                class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-370 rounded-s-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+                type="button">All categories <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="m1 1 4 4 4-4" />
+                </svg></button>
+              <div id="dropdown"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                  <li>
+                    <button type="button"
+                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Mockups</button>
+                  </li>
+                  <li>
+                    <button type="button"
+                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Templates</button>
+                  </li>
+                  <li>
+                    <button type="button"
+                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Design</button>
+                  </li>
+                  <li>
+                    <button type="button"
+                      class="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Logos</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="relative lg:w-[280px] lg:mr-16">
+                <input type="search" id="search-dropdown"
+                  class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 dark:bg-gray-700 dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                  placeholder="Search For items......" required />
+                <button type="submit"
+                  class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-button rounded-e-lg border focus:ring-4 focus:outline-none">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                  </svg>
+                  <span class="sr-only">Search</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="flex space-x-8">
+          <div class="flex items-center">
+            <img class="w-4 h-4" src="images/Icon.jpg" alt="">
+            <p>Account</p>
+          </div>
+          <div class="flex items-center">
+            <img class="w-4 h-4" src="images/Icon (1).jpg" alt="">
+            <p>Account</p>
+          </div>
+          <div class="flex items-center">
+            <img class="w-4 h-4" src="images/Icon (2).jpg" alt="">
+            <p>Account</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-orange-200 lg:h-[550px]">
+      <div class="max-w-5xl mx-auto p-2">
+        <div class="flex flex-col md:flex-row rounded-lg justify-between lg:my-16">
+          <div class="lg:space-y-5 space-y-2 py-4 md:py-12">
+            <div class="flex text-xl font-bold">
+              <h6 class="text-button">100%</h6>
+              <h6> Organic Vegetables</h6>
+            </div>
+            <h2 class="text-3xl md:text-[55px] font-black leading-none md:w-[522px]">The best way to
+              stuff your wallet.</h2>
+            <p class="md:w-[400px] text-sm text-p-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              reiciendis beatae consequuntur.</p>
+            <button class="border py-1 px-5 bg-button border-button rounded text-white">shop now</button>
+          </div>
+          <div class="md:my-8 lg:my-0">
+            <img class="lg:w-96 md:w-full border rounded-full" src="images/vegetable.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="max-w-5xl mx-auto p-2">
+      <div class="flex flex-col md:flex-row gap-4 my-8">
+        <div class="space-y-1">
+          <div class="border bg-[#E9E9E9] p-2 rounded lg:w-[330px] md:w-[240px] text-center">
+            <h5 class="text-base font-medium text-button">Cake & Milk</h5>
+            <p class="text-xs text-p-title">(65 items)</p>
+          </div>
+          <div class="border bg-[#E9E9E9] p-2 rounded lg:w-[330px] md:w-[240px] text-center">
+            <h5 class="text-base font-medium ">Fresh Meat</h5>
+            <p class="text-xs text-p-title">(30 items)</p>
+          </div>
+          <div class="border bg-[#E9E9E9] p-2 rounded lg:w-[330px] md:w-[240px] text-center">
+            <h5 class="text-base font-medium">Vegetables</h5>
+            <p class="text-xs text-p-title">(25 items)</p>
+          </div>
+          <div class="border bg-[#E9E9E9] p-2 rounded lg:w-[330px] md:w-[240px] text-center">
+            <h5 class="text-base font-medium">Apple & Mango</h5>
+            <p class="text-xs text-p-title">(45 items)</p>
+          </div>
+          <div class="border bg-[#E9E9E9] p-2 rounded lg:w-[330px] md:w-[240px] text-center">
+            <h5 class="text-base font-medium">Strawberry</h5>
+            <p class="text-xs text-p-title">(68 items)</p>
+          </div>
+          <div class="border bg-[#E9E9E9] p-4 rounded lg:w-[330px] md:w-[240px] text-center">
+            <h5 class="text-base font-medium text-button">View More</h5>
+          </div>
+        </div>
+        <div>
+          <div class="">
+            <img class="h-[370px] w-[324px] rounded" src="images/drink1.png" alt="">
+          </div>
+        </div>
+        <div>
+          <div class="">
+            <img class="h-[370px] w-[324px] rounded" src="images/drink.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-5xl mx-auto p-2">
+      <div class="text-center">
+        <h2 class="text-3xl font-bold">Popular Products</h2>
+        <p class="text-sm text-p-title mx-auto lg:w-[495px] text-center">Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore lacus vel facilisis.</p>
+      </div>
+      <div class="flex flex-col md:flex-row gap-4 my-6 md:my-8">
+        <div class="space-y-5">
+          <div class="space-y-1">
+            <div class="border bg-[#E9E9E9] py-1 px-3 flex justify-between rounded md:w-[240px]">
+              <h5 class="text-base font-medium hover:text-button">All</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="w-4 h-4 hover:text-button">
+                <path fill-rule="evenodd"
+                  d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="border bg-[#E9E9E9] py-1 px-3 flex justify-between rounded md:w-[240px]">
+              <h5 class="text-base font-medium hover:text-button">Snack</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="w-4 h-4 hover:text-button">
+                <path fill-rule="evenodd"
+                  d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="border bg-[#E9E9E9] py-1 px-3 flex justify-between rounded md:w-[240px]">
+              <h5 class="text-base font-medium hover:text-button">Vegetable</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="w-4 h-4 hover:text-button">
+                <path fill-rule="evenodd"
+                  d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="border bg-[#E9E9E9] py-1 px-3 flex justify-between rounded md:w-[240px]">
+              <h5 class="text-base font-medium hover:text-button">Fruit</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="w-4 h-4 hover:text-button">
+                <path fill-rule="evenodd"
+                  d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="border bg-[#E9E9E9] py-1 px-3 flex justify-between rounded md:w-[240px]">
+              <h5 class="text-base font-medium hover:text-button">Bakery</h5>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                class="w-4 h-4 hover:text-button">
+                <path fill-rule="evenodd"
+                  d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z"
+                  clip-rule="evenodd" />
+              </svg>
+            </div>
+
+          </div>
+          <!-- left site -->
+          <div class="relative">
+            <img class="md:w-[240px] md:h-[580px]" src="images/left.jpg" alt="">
+            <div class="absolute top-24 left-4 space-y-2">
+              <h4 class="text-4xl font-normal leading-none text-white">Juicy</h4>
+              <h2 class="text-4xl font-black text-[#F7E8AA] uppercase">Fruits</h2>
+              <p class="text-white leading-6">100% Natural</p>
+              <button class="text-white text-base font-bold leading-4 bg-button py-2 rounded px-3">Shop Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="border h-96 p-2 rounded md:w-[240px]">
+            <img class="h-52 border md:w-64 w-96 rounded" src="images/orange.jpg" alt="">
+            <div class="px-2 py-2 text-center space-y-3">
+              <div>
+                <p class="text-[#777]">Vegetables</p>
+                <div class="flex items-center ml-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-[#999] ml-2">(4.5)</p>
+                </div>
+              </div>
+              <h1 class="text-[15px] font-medium">Fresh organic villa farm lomon
+                500gm pack</h1>
+              <div class="flex ml-12 items-center gap-3">
+                <h5 class="text-base font-bold">$120.25</h5>
+                <h5 class="text-sm font-normal text-p-title line-through">$123.25</h5>
+              </div>
+            </div>
+          </div>
+          <div class="border h-96 p-2 rounded md:w-[240px]">
+            <img class="h-52 md:w-64 w-96 rounded border" src="images/m-black.jpg" alt="">
+            <div class="px-2 py-2 text-center space-y-3">
+              <div>
+                <p class="text-[#777]">Vegetables</p>
+                <div class="flex items-center ml-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-[#999] ml-2">(4.5)</p>
+                </div>
+              </div>
+              <h1 class="text-[15px] font-medium">Fresh organic villa farm lomon
+                500gm pack</h1>
+              <div class="flex ml-12 items-center gap-3">
+                <h5 class="text-base font-bold">$120.25</h5>
+                <h5 class="text-sm font-normal text-p-title line-through">$123.25</h5>
+              </div>
+            </div>
+          </div>
+          <div class="border h-96 p-2 rounded md:w-[240px]">
+            <img class="h-52 md:w-64 w-96 rounded border" src="images/drink-right.jpg" alt="">
+            <div class="px-2 py-2 text-center space-y-3">
+              <div>
+                <p class="text-[#777]">Vegetables</p>
+                <div class="flex items-center ml-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-[#999] ml-2">(4.5)</p>
+                </div>
+              </div>
+              <h1 class="text-[15px] font-medium">Fresh organic villa farm lomon
+                500gm pack</h1>
+              <div class="flex ml-12 items-center gap-3">
+                <h5 class="text-base font-bold">$120.25</h5>
+                <h5 class="text-sm font-normal text-p-title line-through">$123.25</h5>
+              </div>
+            </div>
+          </div>
+          <div class="border h-96 p-2 rounded md:w-[240px]">
+            <img class="h-52 md:w-64 w-96 rounded border" src="images/food.jpg" alt="">
+            <div class="px-2 py-2 text-center space-y-3">
+              <div>
+                <p class="text-[#777]">Vegetables</p>
+                <div class="flex items-center ml-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-[#999] ml-2">(4.5)</p>
+                </div>
+              </div>
+              <h1 class="text-[15px] font-medium">Fresh organic villa farm lomon
+                500gm pack</h1>
+              <div class="flex ml-12 items-center gap-3">
+                <h5 class="text-base font-bold">$120.25</h5>
+                <h5 class="text-sm font-normal text-p-title line-through">$123.25</h5>
+              </div>
+            </div>
+          </div>
+          <div class="border h-96 p-2 rounded md:w-[240px]">
+            <img class="h-52 md:w-64 w-96 rounded border" src="images/m-white.jpg" alt="">
+            <div class="px-2 py-2 text-center space-y-3">
+              <div>
+                <p class="text-[#777]">Vegetables</p>
+                <div class="flex items-center ml-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-[#999] ml-2">(4.5)</p>
+                </div>
+              </div>
+              <h1 class="text-[15px] font-medium">Fresh organic villa farm lomon
+                500gm pack</h1>
+              <div class="flex ml-12 items-center gap-3">
+                <h5 class="text-base font-bold">$120.25</h5>
+                <h5 class="text-sm font-normal text-p-title line-through">$123.25</h5>
+              </div>
+            </div>
+          </div>
+          <div class="border h-96 p-2 rounded md:w-[240px]">
+            <img class="h-52 md:w-64 w-96 rounded border" src="images/cake.jpg" alt="">
+            <div class="px-2 py-2 text-center space-y-3">
+              <div>
+                <p class="text-[#777]">Vegetables</p>
+                <div class="flex items-center ml-10">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                    class="w-5 h-5 text-orange-400">
+                    <path fill-rule="evenodd"
+                      d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  <p class="text-[#999] ml-2">(4.5)</p>
+                </div>
+              </div>
+              <h1 class="text-[15px] font-medium">Fresh organic villa farm lomon
+                500gm pack</h1>
+              <div class="flex ml-12 items-center gap-3">
+                <h5 class="text-base font-bold">$120.25</h5>
+                <h5 class="text-sm font-normal text-p-title line-through">$123.25</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-5xl mx-auto p-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="rounded h-[180px] bg-green-200">
+          <div class="flex gap-4">
+            <div class="md:py-8 py-2 pl-6 space-y-2">
+              <h2 class="text-xl font-bold leading-6">Healthy
+                Bakery Products</h2>
+              <div class="flex gap-2 items-center">
+                <h6 class="text-xl font-medium md:font-bold text-button md:leading-6">30%</h6>
+                <p class="text-sm leading-4"> Off on first order</p>
+              </div>
+              <h6 class="w-[90px] text-center py-2 rounded px-3 bg-button leading-4 text-white text-sm font-bold">shop
+                now
+              </h6>
+            </div>
+            <div class="my-5">
+              <img class="md:w-48 h-40 rounded-bl-full rounded-tr-full" src="images/vegetable1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="rounded h-[180px] bg-[#E9CBBE]">
+          <div class="flex gap-4">
+            <div class="md:py-8 py-2 pl-6 space-y-2">
+              <h2 class="text-xl font-bold leading-6">Healthy
+                Bakery Products</h2>
+              <div class="flex gap-2 items-center">
+                <h6 class="text-xl font-medium md:font-bold text-button md:leading-6">30%</h6>
+                <p class="text-sm leading-4"> Off on first order</p>
+              </div>
+              <h6 class="w-[90px] text-center py-2 rounded px-3 bg-button leading-4 text-white text-sm font-bold">shop
+                now
+              </h6>
+            </div>
+            <div class="my-5">
+              <img class="md:w-48 h-40 rounded-bl-full rounded-tr-full" src="images/vegetable1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="rounded h-[180px] bg-rose-200">
+          <div class="flex gap-4">
+            <div class="md:py-8 py-2 pl-6 space-y-2">
+              <h2 class="text-xl font-bold leading-6">Healthy
+                Bakery Products</h2>
+              <div class="flex gap-2 items-center">
+                <h6 class="text-xl font-medium md:font-bold text-button md:leading-6">30%</h6>
+                <p class="text-sm leading-4"> Off on first order</p>
+              </div>
+              <h6 class="w-[90px] text-center py-2 rounded px-3 bg-button leading-4 text-white text-sm font-bold">shop
+                now
+              </h6>
+            </div>
+            <div class="my-5">
+              <img class="md:w-48 h-40 rounded-bl-full rounded-tr-full" src="images/vegetable1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-5xl mx-auto p-2">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 my-12 gap-4">
+        <div
+          class="border border-[#E9E9E9] bg-[#F7F7F8] py-10 px-4 text-center space-y-2 md:h-[140px] rounded md:w-[240px]">
+          <h4 class="text-lg font-semibold text-[#2B2B2D]">Product Packing</h4>
+          <p class="text-sm font-light text-p-title leading-5">Lorem ipsum dolor sit amet,
+            consectetur adipisicing.</p>
+        </div>
+        <div
+          class="border border-[#E9E9E9] bg-[#F7F7F8] py-10 px-4 text-center space-y-2 md:h-[140px] rounded md:w-[240px]">
+          <h4 class="text-lg font-semibold text-[#2B2B2D]">24X7 Support</h4>
+          <p class="text-sm font-light text-p-title leading-5">Lorem ipsum dolor sit amet,
+            consectetur adipisicing.</p>
+        </div>
+        <div
+          class="border border-[#E9E9E9] bg-[#F7F7F8] py-10 px-4 text-center space-y-2 md:h-[140px] rounded md:w-[240px]">
+          <h4 class="text-lg font-semibold text-[#2B2B2D]">Delivery in 5 Days</h4>
+          <p class="text-sm font-light text-p-title leading-5">Lorem ipsum dolor sit amet,
+            consectetur adipisicing.</p>
+        </div>
+        <div
+          class="border border-[#E9E9E9] bg-[#F7F7F8] py-10 px-4 text-center space-y-2 md:h-[140px] rounded md:w-[240px]">
+          <h4 class="text-lg font-semibold text-[#2B2B2D]">Payment Secure</h4>
+          <p class="text-sm font-light text-p-title leading-5">Lorem ipsum dolor sit amet,
+            consectetur adipisicing.</p>
+        </div>
+      </div>
+    </section>
+    <section class="p-2 lg:p-0">
+      <div class="relative">
+        <img class="h-[200px] md:h-full rounded opacity-55" src="images/bannar4.jpg" alt="">
+        <div
+          class="absolute border rounded -top-0 lg:top-28 lg:left-44 md:top-10 lg:w-[450px] p-2 w-[305px] md:w-[420px] lg:p-6">
+          <div class="flex items-center">
+            <h6 class="text-button text-xl md:text-2xl font-bold leading-8">35%</h6>
+            <p class="text-base font-normal text-[#212529]">OFF</p>
+          </div>
+          <h2 class="md:text-3xl text-xl font-bold">Great deal on organic food.</h2>
+          <p class="text-base font-light text-current">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+            do maecenas accumsan lacus vel facilisis.</p>
+          <div class="flex space-x-2 border border-[#E9CBBE] shadow rounded w-[200px]">
+            <div>
+              <h4 class="text-xl font-medium md:font-bold">326 : </h4>
+              <p class="text-sm font-normal text-current">Days</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium md:font-bold">326 : </h4>
+              <p class="text-sm font-normal text-current">Days</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium md:font-bold">326 : </h4>
+              <p class="text-sm font-normal text-current">Days</p>
+            </div>
+            <div>
+              <h4 class="text-xl font-medium md:font-bold">326</h4>
+              <p class="text-sm font-normal text-current">Days</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-5xl mx-auto p-2">
+      <div class="flex flex-col md:flex-row gap-4 my-10">
+        <div>
+          <img class="" src="images/img-sec1.jpg" alt="">
+        </div>
+        <div>
+          <img class="" src="images/img-sec2.jpg" alt="">
+        </div>
+        <div class="relative">
+          <img class="" src="images/img-sec3.jpg" alt="">
+          <div
+            class="absolute space-y-2 bottom-0 top-12 left-12 lg:left-56 lg:ml-3 md:left-28 md:top-24 lg:top-32 text-end w-[250px]">
+            <h2 class="text-2xl font-bold lg:font-black text-[#2B2B2D]">Organic & Healthy
+              Vegetables</h2>
+            <div class="items-center">
+              <h6 class="text-xl font-black leading-6 text-[#2B2B2D]">25% <span class="text-sm font-bold">OFF</span>
+              </h6>
+
+            </div>
+            <button class="bg-button text-white rounded py-1 px-3">shop now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-5xl mx-auto p-2">
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="relative bg-gray-100 border rounded lg:w-full pt-14 pb-6">
+          <div class="lg:w-[260px] text-center lg:ml-8">
+            <p class="text-sm font-normal text-p-title">Co Founder</p>
+            <h5 class="text-xl font-bold">Stephen Smith</h5>
+            <p class="text-sm text-p-title">“eiusmpsu dolor sit amet, conse cte tur
+              ng elit, sed do eiusmod tem lacus vel
+              facilisis.”</p>
+          </div>
+          <div class="absolute -top-4 left-28 lg:-top-12 md:-top-8 lg:left-28 md:left-20">
+            <img class="md:border-8 border-4 lg:w-24 md:w-20 w-16 border-white  rounded-full" src="images/member1.png"
+              alt="">
+          </div>
+        </div>
+        <div class="relative bg-gray-100 border rounded lg:w-full pt-14 pb-6">
+          <div class="lg:w-[260px] text-center lg:ml-8">
+            <p class="text-sm font-normal text-p-title">Manager</p>
+            <h5 class="text-xl font-bold">Lorem Robinson</h5>
+            <p class="text-sm text-p-title">“eiusmpsu dolor sit amet, conse cte tur
+              ng elit, sed do eiusmod tem lacus vel
+              facilisis.”</p>
+          </div>
+          <div class="absolute -top-4 left-28 lg:-top-12 md:-top-8 md:left-20 lg:left-28">
+            <img class="md:border-8 border-4 lg:w-24 md:w-20 w-16 border-white  rounded-full" src="images/member2.png"
+              alt="">
+          </div>
+        </div>
+        <div class="relative bg-gray-100 border rounded lg:w-full pt-14 pb-6">
+          <div class="lg:w-[260px] text-center lg:ml-8">
+            <p class="text-sm font-normal text-p-title">Team Leader</p>
+            <h5 class="text-xl font-bold">Saddika Alard</h5>
+            <p class="text-sm text-p-title">“eiusmpsu dolor sit amet, conse cte tur
+              ng elit, sed do eiusmod tem lacus vel
+              facilisis.”</p>
+          </div>
+          <div class="absolute -top-4 left-28 md:-top-8 md:left-20 lg:-top-12 lg:left-28">
+            <img class="md:border-8 lg:w-24 border-4 md:w-20 w-16 border-white  rounded-full" src="images/member3.png"
+              alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-5xl mx-auto p-2">
+      <div class="text-center md:w-[555px] mx-auto my-10">
+        <h2 class="text-3xl font-bold">Latest News</h2>
+        <p class="text-sm text-p-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore lacus vel facilisis.</p>
+      </div>
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="md:w-[330px] border rounded">
+          <div class="space-y-2 md:p-5">
+            <p class="text-[#777]">By Admin | <span>Snacks</span></p>
+            <h4 class="text-[17px] font-semibold">Urna pretium elit mauris cursus at elit
+              Vestibulum.</h4>
+            <p class="text-sm font-bold text-[#64B496]">Read More</p>
+          </div>
+          <div class="relative">
+            <img class="h-[200px] rounded-b" src="images/dessert-bg.jpeg" alt="">
+            <div class="bg-[#000000B3] absolute bottom-2 right-4 text-white rounded p-2 w-[45px] text-center">
+              <h6 class="text-2xl font-bold leading-6">10</h6>
+              <p class="text-[17px] leading-4">oct</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-[330px] border rounded">
+          <div class=" space-y-2 md:p-5">
+            <p class="text-[#777]">By Admin | <span>Snacks</span></p>
+            <h4 class="text-[17px] font-semibold">Urna pretium elit mauris cursus at elit
+              Vestibulum.</h4>
+            <p class="text-sm font-bold text-[#64B496]">Read More</p>
+          </div>
+          <div class="relative">
+            <img class="md:h-[200px] rounded-b" src="images/salad-bg.jpg" alt="">
+            <div class="bg-[#000000B3] absolute bottom-2 right-4 text-white rounded p-2 w-[45px] text-center">
+              <h6 class="text-2xl font-bold leading-6">9</h6>
+              <p class="text-[17px] leading-4">sep</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-[330px] border rounded">
+          <div class="space-y-2 md:p-5">
+            <p class="text-[#777]">By Admin | <span>Snacks</span></p>
+            <h4 class="text-[17px] font-semibold">Urna pretium elit mauris cursus at elit
+              Vestibulum.</h4>
+            <p class="text-sm font-bold text-[#64B496]">Read More</p>
+          </div>
+          <div class="relative">
+            <img class="md:h-[200px] rounded-b" src="images/soup-bg.jpg" alt="">
+            <div class="bg-[#000000B3] absolute bottom-2 right-4 text-white rounded p-2 w-[45px] text-center">
+              <h6 class="text-2xl font-bold leading-6">12</h6>
+              <p class="text-[17px] leading-4">oct</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-[#D9D9D9] lg:h-[400px]">
+    <section class="max-w-5xl mx-auto">
+      <div class="flex flex-col md:flex-row gap-4">
+        <div class="">
+          <div class="md:w-[340px] md:space-y-4 pt-8 md:pt-20">
+            <div class="flex">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="42" viewBox="0 0 40 42" fill="none">
+                <path d="M20.3704 1.7683C20.3704 1.7683 19.9023 2.25427 20.0262 3.17365C20.15 4.09303 20.6534 5.36769 20.5853 6.25068C20.5173 7.13367 19.7038 9.30537 19.7038 9.30537L20.7156 10.7907L22.0902 9.7248C22.0902 9.7248 22.9531 6.92489 22.8435 5.80941C22.7339 4.69394 22.6403 2.02499 22.6403 2.02499L20.3704 1.7683Z" fill="#433709"/>
+                <path d="M21.2641 1.87313C21.2845 2.40711 21.5385 4.61218 21.6344 5.58578C21.7441 6.70126 20.8811 9.50118 20.8811 9.50118L19.9727 10.0233L20.4799 10.7679L21.8545 9.70201C21.8545 9.70201 22.7175 6.9021 22.6079 5.78662C22.4982 4.67114 22.4046 2.0022 22.4046 2.0022L21.2654 1.87338L21.2641 1.87313Z" fill="#261C02"/>
+                <path d="M22.6458 2.0808C22.6177 2.37162 22.0732 2.55841 21.4305 2.49603C20.787 2.43418 20.2891 2.14705 20.3166 1.85545C20.3447 1.56462 20.8893 1.37783 21.532 1.44021C22.1755 1.50206 22.6734 1.7892 22.6458 2.0808Z" fill="#FCD3B3"/>
+                <path d="M19.9275 8.15125C19.9275 8.15125 15.4836 8.17736 12.1079 14.1121C8.73299 20.0462 9.28066 25.0272 11.5871 29.3125C13.8927 33.5984 16.5357 35.6846 20.6211 35.9867C24.7058 36.2894 31.3278 29.9622 31.3209 25.5848C31.3121 19.9549 29.7861 14.8526 28.1981 12.4764C26.6102 10.1001 24.3974 8.98271 23.2555 8.53288C22.1149 8.0833 20.891 8.00874 20.891 8.00874L19.9283 8.15072L19.9275 8.15125Z" fill="#4B5B19"/>
+                <path d="M17.5723 7.60073C17.5723 7.60073 18.3072 8.31754 18.5635 8.44188L18.8191 8.56675L18.3184 9.54552C18.3184 9.54552 17.6269 8.92417 17.6382 8.90399C17.6494 8.88382 17.5715 7.60126 17.5715 7.60126L17.5723 7.60073Z" fill="#6B7B3E"/>
+                <path d="M17.5713 7.60096C17.3442 8.38886 16.9754 8.95722 16.9754 8.95722L18.318 9.54653L17.5719 7.60173L17.5713 7.60096Z" fill="#4B5B19"/>
+                <path d="M15.9945 8.14796C15.9945 8.14796 16.8766 8.6736 17.155 8.73518L17.4334 8.79677L17.1746 9.86538C17.1746 9.86538 16.3574 9.42168 16.3637 9.39921C16.37 9.37674 15.9953 8.14744 15.9953 8.14744L15.9945 8.14796Z" fill="#6B7B3E"/>
+                <path d="M15.9947 8.14798C15.957 8.96709 15.7317 9.60593 15.7317 9.60593L17.1748 9.86541L15.9947 8.14798Z" fill="#4B5B19"/>
+                <path d="M14.775 8.9941C14.775 8.9941 15.7291 9.37519 16.0126 9.39242L16.2973 9.40991L16.2092 10.5055C16.2092 10.5055 15.3329 10.1953 15.3353 10.1721C15.3377 10.1488 14.7758 8.99357 14.7758 8.99357L14.775 8.9941Z" fill="#6B7B3E"/>
+                <path d="M14.7757 8.99403C14.8672 9.80925 14.7436 10.4755 14.7436 10.4755L16.2091 10.5059L14.7749 8.99456L14.7757 8.99403Z" fill="#4B5B19"/>
+                <path d="M11.3887 12.8853C11.3887 12.8853 12.415 12.9284 12.6886 12.8512L12.963 12.7734L13.2436 13.8361C13.2436 13.8361 12.3136 13.8342 12.3084 13.8115C12.3032 13.7889 11.39 12.8855 11.39 12.8855L11.3887 12.8853Z" fill="#6B7B3E"/>
+                <path d="M11.3889 12.885C11.7452 13.6234 11.8501 14.293 11.8501 14.293L13.2433 13.8351L11.3897 12.8845L11.3889 12.885Z" fill="#4B5B19"/>
+                <path d="M12.2695 11.4907C12.2695 11.4907 13.2958 11.5339 13.5695 11.4566L13.8439 11.3789L14.1244 12.4416C14.1244 12.4416 13.1944 12.4396 13.1892 12.417C13.1841 12.3944 12.2708 11.491 12.2708 11.491L12.2695 11.4907Z" fill="#6B7B3E"/>
+                <path d="M12.2698 11.4905C12.6261 12.2288 12.731 12.8985 12.731 12.8985L14.1241 12.4406L12.2706 11.49L12.2698 11.4905Z" fill="#4B5B19"/>
+                
+               <p class="text-2xl text-[#000]">FoodTrove</p>
+            </div>
+            <p class="text-sm leading-6 text-p-title">FoodTrove is the biggest market of grocery products. Get your daily needs from our store.</p>
+            <div class="space-y-2">
+              <div class="flex gap-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="24" viewBox="0 0 21 25" fill="none">
+                  <path d="M7.52941 18.8664L11.6622 14.7168C12.4207 13.9695 12.9339 13.0882 13.2016 12.0732C13.4581 11.0804 13.4581 10.0876 13.2016 9.09487C12.9339 8.07979 12.4235 7.19578 11.6706 6.44284C10.9176 5.6899 10.0336 5.17957 9.01856 4.91186C8.02579 4.6553 7.03303 4.6553 6.04026 4.91186C5.02519 5.17957 4.14118 5.6899 3.38824 6.44284C2.63529 7.19578 2.12497 8.07979 1.85725 9.09487C1.6007 10.0876 1.6007 11.0804 1.85725 12.0732C2.12497 13.0882 2.63808 13.9695 3.3966 14.7168L7.52941 18.8664ZM7.52941 21.2256L2.20863 15.9048C1.23817 14.9455 0.585621 13.8077 0.25098 12.4915C-0.0836601 11.2198 -0.0836601 9.9482 0.25098 8.67657C0.585621 7.36031 1.23538 6.21975 2.20026 5.25487C3.16514 4.28999 4.30571 3.63465 5.62196 3.28885C6.89359 2.96537 8.16523 2.96537 9.43686 3.28885C10.7531 3.63465 11.8937 4.28999 12.8586 5.25487C13.8234 6.21975 14.4732 7.36031 14.8078 8.67657C15.1425 9.9482 15.1425 11.2198 14.8078 12.4915C14.4732 13.8077 13.8207 14.9455 12.8502 15.9048L7.52941 21.2256ZM7.52941 12.2572C7.83059 12.2572 8.10946 12.1819 8.36601 12.0313C8.62257 11.8807 8.82614 11.6772 8.97673 11.4206C9.12732 11.1641 9.20261 10.8852 9.20261 10.584C9.20261 10.2828 9.12732 10.004 8.97673 9.74742C8.82614 9.49086 8.62257 9.28729 8.36601 9.1367C8.10946 8.98611 7.83059 8.91082 7.52941 8.91082C7.22824 8.91082 6.94937 8.98611 6.69281 9.1367C6.43625 9.28729 6.23268 9.49086 6.08209 9.74742C5.9315 10.004 5.85621 10.2828 5.85621 10.584C5.85621 10.8852 5.9315 11.1641 6.08209 11.4206C6.23268 11.6772 6.43625 11.8807 6.69281 12.0313C6.94937 12.1819 7.22824 12.2572 7.52941 12.2572ZM7.52941 13.9304C6.92706 13.9304 6.36932 13.7798 5.85621 13.4787C5.34309 13.1775 4.93595 12.7703 4.63477 12.2572C4.33359 11.7441 4.18301 11.1836 4.18301 10.5757C4.18301 9.96772 4.33359 9.40999 4.63477 8.90245C4.93595 8.39491 5.34309 7.99055 5.85621 7.68938C6.36932 7.3882 6.92706 7.23761 7.52941 7.23761C8.13176 7.23761 8.6895 7.3882 9.20261 7.68938C9.71573 7.99055 10.1229 8.39491 10.4241 8.90245C10.7252 9.40999 10.8758 9.96772 10.8758 10.5757C10.8758 11.1836 10.7252 11.7441 10.4241 12.2572C10.1229 12.7703 9.71573 13.1775 9.20261 13.4787C8.6895 13.7798 8.13176 13.9304 7.52941 13.9304Z" fill="#F53E32"/>
+                  </svg>
+                  <p class="text-sm text-p-title leading-6">51 Green St.Huntington ohaio beach ontario, NY
+                    11746 KY 4783, USA.</p>
+              </div>
+                  <div class="space-y-2">
+                    <div class="flex gap-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 21 25" fill="none">
+                        <path d="M17.5686 4.61061C17.8029 4.61061 18.0009 4.69148 18.1626 4.85322C18.3244 5.01497 18.4052 5.21296 18.4052 5.44721V18.8328C18.4052 19.0671 18.3244 19.2651 18.1626 19.4268C18.0009 19.5886 17.8029 19.6694 17.5686 19.6694H2.5098C2.27556 19.6694 2.07756 19.5886 1.91582 19.4268C1.75407 19.2651 1.6732 19.0671 1.6732 18.8328V17.9962H16.732V8.208L10.0392 14.2315L1.6732 6.70211V5.44721C1.6732 5.21296 1.75407 5.01497 1.91582 4.85322C2.07756 4.69148 2.27556 4.61061 2.5098 4.61061H17.5686ZM6.69281 14.6498V16.323H0V14.6498H6.69281ZM4.18301 10.4668V12.14H0V10.4668H4.18301ZM16.3639 6.28381H3.71451L10.0392 11.9727L16.3639 6.28381Z" fill="#F53E32"/>
+                        </svg>
+                        <p class="text-sm leading-6 text-[#777]">example@email.com</p>
+                    </div>
+                    <div class="flex gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 21 25" fill="none">
+                        <path d="M5.32078 11.0357C5.7112 11.7273 6.18806 12.3547 6.75137 12.9181C7.31468 13.4814 7.94213 13.9582 8.63373 14.3486L9.36993 13.3113C9.49264 13.1328 9.65717 13.0212 9.86353 12.9766C10.0699 12.932 10.2679 12.9599 10.4575 13.0603C11.6511 13.7184 12.9283 14.0977 14.2892 14.1981C14.5011 14.2204 14.6824 14.3096 14.8329 14.4658C14.9835 14.6219 15.0588 14.8116 15.0588 15.0347V18.7659C15.0588 18.9778 14.9863 19.1647 14.8413 19.3264C14.6963 19.4882 14.5178 19.5802 14.3059 19.6025C13.8597 19.6471 13.4135 19.6694 12.9673 19.6694C11.2049 19.6694 9.52052 19.3292 7.91425 18.6488C6.36375 17.9907 4.99172 17.0648 3.79817 15.8713C2.60462 14.6777 1.67878 13.3057 1.02065 11.7552C0.340218 10.1489 0 8.46455 0 6.70211C0 6.25593 0.0223094 5.80974 0.0669281 5.36355C0.0892375 5.15161 0.181264 4.97314 0.343007 4.82813C0.504749 4.68312 0.69159 4.61061 0.903529 4.61061H4.63477C4.85786 4.61061 5.04749 4.6859 5.20366 4.83649C5.35983 4.98708 5.44906 5.16834 5.47137 5.38028C5.57176 6.74115 5.95102 8.01837 6.60915 9.21192C6.70954 9.40155 6.73743 9.59954 6.69281 9.8059C6.64819 10.0123 6.53664 10.1768 6.35817 10.2995L5.32078 11.0357ZM3.21255 10.4836L4.80209 9.34577C4.3559 8.37532 4.04915 7.35466 3.88183 6.28381H1.6732V6.70211C1.6732 8.23031 1.9688 9.69715 2.56 11.1026C3.12889 12.4524 3.93481 13.6487 4.97778 14.6917C6.02074 15.7346 7.21708 16.5405 8.5668 17.1094C9.97229 17.7006 11.4391 17.9962 12.9673 17.9962H13.3856V15.7876C12.3148 15.6203 11.2941 15.3135 10.3237 14.8673L9.18588 16.4569C8.72854 16.2784 8.28235 16.0665 7.84732 15.8211L7.79712 15.8043C6.98283 15.3358 6.24105 14.767 5.57176 14.0977C4.90248 13.4284 4.33359 12.6866 3.8651 11.8723L3.84837 11.8221C3.60296 11.3871 3.39102 10.9409 3.21255 10.4836Z" fill="#F53E32"/>
+                        </svg>
+                        <p class="text-sm leading-6 text-[#777]">+91 123 4567890</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+            <div class="pt-8 md:pt-20">
+              <ul class="space-y-3">
+                <h6 class="text-lg font-bold leading-6 ">Company</h6>
+                <li><a class="link text-[#777] text-sm link-hover">About Us</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Delivery Information</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Privacy Policy</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Terms & Conditions</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">contact Us</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Support Center</a></li>
+              </ul>
+            </div>
+            <div class="lg:-ml-12 pt-8 md:pt-20">
+              <ul class="space-y-3">
+                <h6 class="text-lg font-bold leading-6 ">Category</h6>
+                <li><a class="link text-[#777] text-sm link-hover">Dairy & Bakery</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Fruits & Vegetable</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Snack & Spice</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Juice & Drinks </a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Chicken & Meat</a></li>
+                <li><a class="link text-[#777] text-sm link-hover">Fast Food</a></li>
+              </ul>
+            </div>
+             <div class="md:-ml-20 pt-8 md:pt-20">
+              <h6 class="text-lg font-bold leading-6 ">Subscribe Our Newsletter</h6>
+              <div class="relative my-3">
+                <input type="text" placeholder="Search" class="input input-bordered lg:w-[302px] w-[320px] md:w-[400px] h-10" />
+                <div class="absolute top-3 -right-36 md:-right-24 lg:right-4">
+                  <img src="images/rocat.jpg" alt="">
+                </div>
+              </div>
+              <div>
+                <i class="border bg-white w-10 rounded p-2 text-center fa-brands fa-facebook-f"></i>
+                <i class="border bg-white w-10 rounded p-2 text-center fa-brands fa-x-twitter"></i>
+                <i class="border bg-white w-10 rounded p-2 text-center fa-solid fa-basketball"></i>
+                <i class="border bg-white w-10 rounded p-2 text-center fa-brands fa-instagram"></i>
+              </div>
+              <div class="flex gap-2 my-4">
+                <img class="w-[73px] h-[73px] md:w-[94px] md:h-[94px] lg:w-[69px] lg:h-[69px] rounded" src="images/soup-bg.jpg" alt="">
+                <img class="w-[73px] h-[73px] md:w-[94px] md:h-[94px] lg:w-[69px] lg:h-[69px] rounded" src="images/salad-bg.jpg" alt="">
+                <img class="w-[73px] h-[73px] md:w-[94px] md:h-[94px] lg:w-[69px] lg:h-[69px] rounded" src="images/dessert-bg.jpeg" alt="">
+                <img class="w-[73px] h-[73px] md:w-[94px] md:h-[94px] lg:w-[69px] lg:h-[69px] rounded" src="images/soup-bg.jpg" alt="">
+              </div>
+             </div>
+          </div>
+      </div>
+     <div class="lg:my-10">
+       <div class="space-y-3">
+        <hr>
+       <p class="text-sm leading-4 text-center"><span>© 2024</span> <span class="text-[#F53E32]"><a href="https://www.facebook.com/FoodTrove/">FoodTrove</a></span>, All rights reserved.</p>
+       </div>
+     </div>
+    </section>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
